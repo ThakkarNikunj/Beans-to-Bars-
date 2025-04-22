@@ -231,7 +231,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 # top 10 sales of the day
-st.markdown('<div class="section-header">🏆 Top 10 Sales Days</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header"> Top 10 Sales Days</div>', unsafe_allow_html=True)
 
 top_days = filtered_df.groupby('Date')['Amount'].sum().nlargest(10).reset_index()
 top_days['FormattedDate'] = top_days['Date'].dt.strftime('%b %d, %Y')
@@ -368,7 +368,7 @@ st.plotly_chart(fig, use_container_width=True)
 
 
 # Country Performance
-st.markdown('<div class="section-header">🌎 Country Performance</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header">Country Performance</div>', unsafe_allow_html=True)
 
 country_sales = filtered_df.groupby('Country')['Amount'].sum()
 top_country = country_sales.idxmax()
